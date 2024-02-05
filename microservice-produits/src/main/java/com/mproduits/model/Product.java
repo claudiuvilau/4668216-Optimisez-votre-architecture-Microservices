@@ -1,6 +1,5 @@
 package com.mproduits.model;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,13 +17,12 @@ public class Product {
 
     private String image;
 
-    private Double prix;
-
+    private int prix;
 
     public Product() {
     }
 
-    public Product(int id, String titre, String description, String image, Double prix) {
+    public Product(int id, String titre, String description, String image, int prix) {
         this.id = id;
         this.titre = titre;
         this.description = description;
@@ -64,11 +62,11 @@ public class Product {
         this.image = image;
     }
 
-    public Double getPrix() {
+    public int getPrix() {
         return prix;
     }
 
-    public void setPrix(Double prix) {
+    public void setPrix(int prix) {
         this.prix = prix;
     }
 
@@ -82,6 +80,5 @@ public class Product {
                 ", prix=" + prix +
                 '}';
     }
-
 
 }
